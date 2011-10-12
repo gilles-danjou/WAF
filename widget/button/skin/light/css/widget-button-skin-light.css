@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget button
+ *
+ * Includes button-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-button.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+/**
+ * -------------------------------------------------------
+ * @section button container
+ * -------------------------------------------------------
+ */
+.light.waf-button {
+	border-width: 1px;
+	border-style: solid;
+	
+	
+	-webkit-border-radius: 1000px;
+	   -moz-border-radius: 1000px;
+	    -ms-border-radius: 1000px;
+	     -o-border-radius: 1000px;
+	        border-radius: 1000px;
+	
+	-webkit-transition: background-color 0.2s ease-in-out,
+						-webkit-box-shadow 0.2s ease-in-out;
+	   -moz-transition: background-color 0.2s ease-in-out,
+						-moz-box-shadow 0.2s ease-in-out;
+	     -o-transition: background-color 0.2s ease-in-out,
+						box-shadow 0.2s ease-in-out;
+	
+	font-weight: bold;
+}
+
+/**
+ * -------------------------------------------------------
+ * @section button state
+ * -------------------------------------------------------
+ */
+.light.waf-button.waf-state-active {
+	border-width: 2px;
+	border-style: inset;
+}

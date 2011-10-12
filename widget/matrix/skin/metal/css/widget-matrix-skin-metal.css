@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget matrix styles
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/matrix/css/widget-matrix.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ * @colordef #......;
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section matrix element container
+ * -------------------------------------------------------
+ */
+.waf-matrix .metal.waf-matrix-element {
+	-webkit-transition: border 0.2s ease-in-out,
+		-webkit-box-shadow 0.2s ease-in-out;
+	-moz-transition: border 0.2s ease-in-out,
+		background-image 0.2s ease-in-out,
+		-moz-box-shadow 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out,
+		background-image 0.2s ease-in-out,
+		box-shadow 0.2s ease-in-out;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subsection matrix elements states
+ * -------------------------------------------------------
+ */
+.waf-matrix .metal.waf-matrix-element.waf-state-selected {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		from(rgba(0, 0, 0, 0.03)),
+		color-stop(0.2, rgba(0, 0, 0, 0.03)),
+		to(rgba(0, 0, 0, 0.07))
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		rgba(0, 0, 0, 0.03),
+		rgba(0, 0, 0, 0.03) 20%,
+		rgba(0, 0, 0, 0.07)
+	);
+	
+	-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3),
+		 inset 0 0 8px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3),
+		 inset 0 0 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.3),
+		 inset 0 0 8px rgba(0, 0, 0, 0.1);
+}

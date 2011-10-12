@@ -1,0 +1,226 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget skin
+ *
+ * Includes generic rules for all widgets available for the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @colordef #......;
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.metal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget header
+ * -------------------------------------------------------
+ */
+.metal .waf-widget-header {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.02)), to(rgba(0, 0, 0, 0.17)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:         linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05000000', endColorstr='#2b000000');
+
+	
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+	   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+	    -ms-box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+	     -o-box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+	        box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px;
+	
+	font-weight: bold;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget body
+ * -------------------------------------------------------
+ */
+
+/**
+ * -----------------------------------
+ * @subsection widget body scrollbar
+ * -----------------------------------
+ */
+/*scrollbar dimensions */
+.metal .waf-widget-body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:start:decrement,
+.metal .waf-widget-body::-webkit-scrollbar-button:end:increment {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:start:increment,
+.metal .waf-widget-body::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection dataGrid body scrollbar button vertical
+ * -----------------------------------
+ */
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical {
+    border-right: 1px solid rgb(115, 115, 115);
+    border-left: 1px solid rgb(115, 115, 115);
+    
+    background-repeat: no-repeat;
+    background-position: -3px 0px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical:hover {
+    background-position: -3px -16px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical:active {
+    background-position: -3px -32px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical:window-inactive {
+    background-position: -3px -48px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("/walib/WAF/widget/skin/metal/svg/scrollbar-vertical-decrement-arrow.svg"),
+    	-webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(182, 0%, 95%, 1)));
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("/walib/WAF/widget/skin/metal/svg/scrollbar-vertical-increment-arrow.svg"),
+    	-webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(182, 0%, 95%, 1)));
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(115, 115, 115);
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar button horizontal
+ * -----------------------------------
+ */
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal {
+    border-top: 1px solid rgb(115, 115, 115);
+    border-bottom: 1px solid rgb(115, 115, 115);
+    
+    background-repeat: no-repeat;
+    background-position: -1px -2px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal:hover {
+    background-position: -17px -2px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal:active {
+    background-position: -33px -2px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal:window-inactive {
+    background-position: -49px -2px;
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url("/walib/WAF/widget/skin/metal/svg/scrollbar-horizontal-increment-arrow.svg"),
+    	-webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(182, 0%, 95%, 1)));
+    border-left: 1px solid rgb(204, 204, 204);
+    border-right: 1px solid rgb(115, 115, 115);
+}
+
+.metal .waf-widget-body::-webkit-scrollbar-button:horizontal:decrement {
+    background-image: url("/walib/WAF/widget/skin/metal/svg/scrollbar-horizontal-decrement-arrow.svg"),
+    	-webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(182, 0%, 95%, 1)));
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar thumb
+ * -----------------------------------
+ */
+.metal .waf-widget-body::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 2px;
+    border: 1px outset rgba(0, 0, 0, 0.4);
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar corner
+ * -----------------------------------
+ */
+.default .waf-widget-body::-webkit-scrollbar-corner {
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, hsla(0, 0%, 0%, 0.2)), color-stop(1, hsla(0, 0%, 0%, 0)));
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget content
+ * -------------------------------------------------------
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget footer
+ * -------------------------------------------------------
+ */
+.metal .waf-widget-footer {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0.2)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.2));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.2));
+	background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.2));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.2));
+	background-image:         linear-gradient(top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.2));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05000000', endColorstr='#2b000000');
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget state
+ * -------------------------------------------------------
+ */

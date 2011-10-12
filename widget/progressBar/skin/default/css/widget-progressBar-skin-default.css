@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget progressBar
+ *
+ * Includes progressBar-specific rules of the Default skin
+ *
+ * @style default
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/progressBar/css/widget-progressBar.css
+ * @link /walib/WAF/widget/skin/default/css/widget-skin-default.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.default.waf-progressBar {
+	border-width: 1px;
+	border-style: solid;
+	
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.48, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.44)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 48%, hsla(0, 0%, 0%, 0.44) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 48%, hsla(0, 0%, 0%, 0.44) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 48%, hsla(0, 0%, 0%, 0.44) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 48%, hsla(0, 0%, 0%, 0.44) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 48%, hsla(0, 0%, 0%, 0.44) 100%);
+	
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	    -ms-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+	
+	font-size: 10px;
+}
+
+
+
+/**
+ * -----------------------------------
+ * @subsection range
+ * -----------------------------------
+ */
+.default .waf-progressBar-range {
+	background-image: -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 0.1) 50%, hsla(0, 0%, 100%, 0.5) 100%);
+	background-image:    -moz-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0.24) 0%, hsla(0, 0%, 100%, 0.68) 50%, hsla(0, 0%, 0%, 0.24) 100%);
+	background-image:     -ms-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0.24) 0%, hsla(0, 0%, 100%, 0.68) 50%, hsla(0, 0%, 0%, 0.24) 100%);
+	background-image:      -o-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0.24) 0%, hsla(0, 0%, 100%, 0.68) 50%, hsla(0, 0%, 0%, 0.24) 100%);
+	background-image:         repeating-linear-gradient(left, hsla(0, 0%, 0%, 0.24) 0%, hsla(0, 0%, 100%, 0.68) 50%, hsla(0, 0%, 0%, 0.24) 100%);
+	
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	    -ms-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+
+.default .waf-progressBar-range span {
+	display: inline-block;
+	margin: auto 5px;
+	height: 100%;
+}

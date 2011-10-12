@@ -1,0 +1,550 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget color palette
+ *
+ * @style Blue
+ *
+ * @colordef rgb(0, 112, 163);		Color
+ * @colordef rgb(255, 239, 143);	Background state
+ * @colordef rgb(221, 221, 221);	Border
+ * @colordef rgb(228, 241, 251);	Background
+ *
+ */
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.waf-widget {
+	color: rgb(61, 66, 70);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget subElements
+ * -------------------------------------------------------
+ */
+/**
+ * -----------------------------------
+ * @subsection Widget header
+ * -----------------------------------
+ */
+.waf-widget-header {
+	background-color: rgb(59, 170, 227);
+	border-color: rgb(53, 153, 204);
+	color: rgb(255, 255, 255);
+}
+
+/**
+ * -----------------------------------
+ * @subsection Widget body
+ * -----------------------------------
+ */
+/* track */
+.waf-widget-body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.17);
+}
+/* thumb */
+.waf-widget-body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * -----------------------------------
+ * @subsection Widget alternate content
+ * -----------------------------------
+ */
+.waf-widget-even {
+	background-color: rgb(222, 237, 247);
+}
+
+/**
+ * -----------------------------------
+ * @subsection Widget footer
+ * -----------------------------------
+ */
+.waf-widget-footer {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(221, 221, 221);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section button
+ * -------------------------------------------------------
+ */
+.waf-button {
+	background-color: rgb(222, 237, 247);
+	border-color: rgb(174, 208, 234);
+	color: rgb(39, 121, 170);
+}
+
+/**
+ * -----------------------------------
+ * @subsection button state
+ * -----------------------------------
+ */
+.waf-button.waf-state-hover,
+.waf-button.waf-state-active {
+	background-color: rgb(228, 241, 251);
+	border-color: rgb(116, 178, 226);
+	color: rgb(0, 112, 163);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section checkbox
+ * -------------------------------------------------------
+ */
+/**
+ * -----------------------------------
+ * @subection checkbox box
+ * -----------------------------------
+ */
+.waf-checkbox .waf-checkbox-box {
+	background-color: rgb(228, 241, 251);
+	border-color: rgb(0, 112, 163);
+}
+
+/**
+ * -----------------------------------
+ * @subsubsection checkbox box state
+ * -----------------------------------
+ */
+.waf-checkbox.waf-state-selected .waf-checkbox-box {
+	background-color: rgb(255, 239, 143);
+}
+
+/**
+ * -----------------------------------
+ * @subection checkbox icon symbol
+ * -----------------------------------
+ */
+.waf-checkbox .waf-checkbox-icon-symbol {
+	fill: rgb(61, 66, 70);
+}
+.waf-checkbox .waf-checkbox-icon-symbol-shadow {
+	fill: rgb(174, 208, 234);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section radio
+ * -------------------------------------------------------
+ */
+/**
+ * -----------------------------------
+ * @subection radio box
+ * -----------------------------------
+ */
+.waf-radio .waf-radio-box {
+	background-color: rgb(59, 170, 227);
+	border-color: rgb(53, 153, 204);
+}
+
+/**
+ * -----------------------------------
+ * @subection radio icon symbol
+ * -----------------------------------
+ */
+.waf-radio .waf-radio-icon-symbol {
+	fill: rgb(53, 153, 204);
+}
+.waf-radio .waf-radio-icon-symbol-shadow {
+	fill: rgb(255, 255, 255);
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section combobox
+ * -------------------------------------------------------
+ */
+.waf-combobox {
+	background-color: rgb(59, 170, 227);
+	border-color: rgb(53, 153, 204);
+	color: rgb(255, 255, 255);
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection combobox button
+ * -----------------------------------
+ */
+.waf-combobox button {
+	background: transparent;
+	border-left-color: hsla(0, 0%, 100%, 0.4);
+}
+
+/**
+ * -----------------------------------
+ * @subsection combobox list
+ * -----------------------------------
+ */
+.waf-combobox-list {
+	border-color: rgb(221, 221, 221);
+	color: rgb(28, 148, 196);
+}
+
+/**
+ * -----------------------------------
+ * @subsection combobox ui-menu-item
+ * -----------------------------------
+ */
+.waf-combobox-list .ui-menu-item a {
+	border-color: transparent;
+}
+
+/**
+ * -----------------------------------
+ * @subsubsection combobox ui-menu-item states
+ * -----------------------------------
+ */
+.waf-combobox-list .ui-menu-item a.ui-state-hover {
+	/* we need to reset the background shortcut for IE */
+	background: none;
+	background-color: rgb(228, 241, 251);
+	color: rgb(0, 112, 163);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuBar
+ * -------------------------------------------------------
+ */
+.waf-menuBar {
+	background-color: rgb(59, 170, 227);
+	border-color: rgb(53, 153, 204);
+}
+
+.waf-menuBar .waf-menuBar {
+	background-image: none;
+	background-color: rgb(222, 237, 247);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem
+ * -------------------------------------------------------
+ */
+.waf-menuItem {
+	border-color: rgb(84, 152, 204);
+	color: rgb(255, 255, 255);
+}
+.waf-menuItem .waf-menuItem {
+	color: rgb(0, 112, 163);	
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem state
+ * -----------------------------------
+ */
+.waf-menuItem.waf-state-hover {
+	background-color: rgb(255, 239, 143);
+	color: rgb(61, 66, 70);
+}
+.waf-menuItem.waf-state-active {
+	background-color: rgb(59, 170, 227);
+	color: rgb(255, 255, 255);
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection sub-menuItem state
+ * -----------------------------------
+ */
+.waf-menuItem .waf-menuItem.waf-state-hover {
+	background-color: rgb(148, 208, 247);
+	color: rgb(0, 112, 163);
+}
+.waf-menuItem .waf-menuItem.waf-state-active {
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section container
+ * -------------------------------------------------------
+ */
+.waf-container {
+	background-color: rgb(38, 148, 232);
+	border-color: rgb(178, 178, 178);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section autoForm
+ * -------------------------------------------------------
+ */
+.waf-autoForm {
+	border-color: rgb(38, 148, 232);
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm body
+ * -----------------------------------
+ */
+.waf-autoForm-body {
+	background-color: rgb(242, 245, 247);
+	border-bottom-color: rgb(174, 208, 234);
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm row
+ * -----------------------------------
+ */
+.waf-autoForm-row.last-child.waf-widget-odd > td {
+	border-bottom-color: rgb(238, 238, 238);
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm col
+ * -----------------------------------
+ */
+.waf-autoForm .attribute-col {
+	border-right-color: rgb(221, 221, 221);
+}
+
+.waf-autoForm .included .attribute-col.expanded {
+	border-right-color: rgb(38, 148, 232);
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm footer
+ * -----------------------------------
+ */
+.waf-autoForm-footer {
+	background-color: rgb(228, 241, 251);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid
+ * -------------------------------------------------------
+ */
+.waf-dataGrid {
+	/**
+	 * @affected webkit win
+	 * @note WARNING !!!
+	 * Dont use rgba color for the container border:
+	 * this make webkit apply a global opacity on the widget
+	 *
+	 * ex: border: 1px solid rgba(0, 0, 0, 0.3);
+	 */
+	border-color: rgb(178, 178, 178);
+}
+
+.waf-dataGrid-header .waf-dataGrid-cell {
+    border-left-color: rgba(0, 0, 0, 0.2);
+}
+
+.waf-dataGrid-body {
+	background-color: rgb(242, 245, 247);
+	border-color: rgb(221, 221, 221);
+	color: rgb(28, 148, 196);
+}
+
+.waf-dataGrid-row {
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+}
+
+/* states */
+.waf-dataGrid-row.waf-state-hover {
+	background-color: rgb(228, 241, 251);
+	color: rgb(0, 112, 163);
+}
+.waf-dataGrid-row.waf-state-active {
+	background-color: rgb(255, 239, 143);
+	color: rgb(61, 66, 70);
+}
+
+.waf-dataGrid-cell {
+    border-left-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section progressBar
+ * -------------------------------------------------------
+ */
+.waf-progressBar {
+	background-color: rgb(222, 237, 247);
+	border-color: rgb(53, 153, 204);
+	color: rgb(255, 255, 255);
+}
+
+.waf-progressBar-range {
+	background-color: rgb(0, 112, 163);
+	border-color: rgb(221, 221, 221);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section slider
+ * -------------------------------------------------------
+ */
+.waf-slider {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(221, 221, 221);
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-range
+ * -----------------------------------
+ */
+.waf-slider .ui-slider-range {
+	background-color: rgb(59, 170, 227);
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-range
+ * -----------------------------------
+ */
+.waf-slider .ui-slider-handle {
+	background-color: rgb(255, 239, 143);
+	border-color: rgb(221, 151, 36);
+}
+
+/* states */
+.waf-slider .ui-slider-handle.ui-state-hover,
+.waf-slider .ui-slider-handle.ui-state-active {
+	background-color: rgb(228, 241, 251);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section textField
+ * -------------------------------------------------------
+ */
+.waf-textField {
+	background-color: rgb(242, 245, 247);
+	border-color: rgb(38, 148, 232);
+	color: rgb(28, 148, 196);
+}
+
+
+/* states */
+.waf-textField.waf-state-hover {
+	background-color: rgb(228, 241, 251);
+	color: rgb(0, 112, 163);
+}
+.waf-textField.waf-state-focus {
+	background-color: rgb(255, 239, 143);
+	color: rgb(54, 54, 54);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section datePicker
+ * -------------------------------------------------------
+ */
+.ui-datepicker .ui-datepicker-header {
+	background-color: rgb(59, 170, 227);
+	border-color: rgb(53, 153, 204);
+	color: rgb(255, 255, 255);
+}
+
+/* states */
+.ui-datepicker td a.ui-state-hover {
+	background-color: rgb(228, 241, 251);
+	border-color: rgb(255, 255, 255);
+	color: rgb(0, 112, 163);
+}
+.ui-datepicker td a.ui-state-active {
+	background-color: rgb(255, 239, 143);
+	border-color: transparent;
+	color: rgb(61, 66, 70);
+}
+.ui-datepicker td a.ui-state-highlight {
+	background-color: rgb(59, 170, 227);
+	border-color: transparent;
+	color: rgb(255, 255, 255);
+}
+
+
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget state
+ * -------------------------------------------------------
+ */
+.waf-state-hover {
+}
+
+.waf-state-active,
+.waf-state-selected {
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section icon
+ * -------------------------------------------------------
+ */
+.waf-icon path {
+	fill: rgb(94, 94, 94);
+}
+
+/**
+ * -----------------------------------
+ * @subsection icon state
+ * -----------------------------------
+ */
+/* hover */
+.waf-icon.waf-state-hover {
+	background-color: transparent;
+}
+.waf-icon.waf-state-hover path {
+	background-color: transparent;
+	opacity: 1;
+}

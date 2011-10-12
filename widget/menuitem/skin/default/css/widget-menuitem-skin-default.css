@@ -1,0 +1,159 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget menuItem
+ *
+ * Includes grid-specific rules of the Default skin
+ *
+ * @style default
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/default/css/widget-skin-default.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem
+ * -------------------------------------------------------
+ */
+.default .waf-menuItem {
+	border-style: solid;
+	font-weight: bold;
+}
+.default .waf-menuItem .waf-menuItem  {
+	border-style: none;
+	font-weight: normal;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem of horizontal menuBar
+ * -----------------------------------
+ */
+/*.default.waf-menuBar-horizontal :not(.waf-menuBar-vertical) .waf-menuItem + .waf-menuItem {
+	border-width: 0 0 0 1px;
+}*/
+.default.waf-menuBar-horizontal .waf-menuItem {
+	/*
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.51, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 1) 51%, hsla(0, 0%, 100%, 1) 100%);
+	*/
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.15)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	
+	border-width: 0;
+}
+
+.default.waf-menuBar-horizontal .waf-menuItem:not(:first-child) {
+	border-width: 0 0 0 1px;
+}
+
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem of vertical menuBar
+ * -----------------------------------
+ */
+/*.default.waf-menuBar-vertical :not(.waf-menuBar-horizontal) .waf-menuItem + .waf-menuItem {
+	border-width: 1px 0 0 0;
+}*/
+.default.waf-menuBar-vertical .waf-menuItem {
+	/*
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.51, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 1) 51%, hsla(0, 0%, 100%, 1) 100%);
+	*/
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.15)), color-stop(1, hsla(0, 0%, 100%, 0))),
+	                  -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0.6)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%),
+	                  -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%),
+	                     -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%),
+	                      -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%),
+	                       -o-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%),
+	                          linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0) 100%);
+	
+	border-width: 0;
+}
+
+.default.waf-menuBar-vertical .waf-menuItem:not(:first-child) {
+	border-width: 1px 0 0 0;
+}
+
+
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem state
+ * -----------------------------------
+ */
+.default .waf-menuItem.waf-state-hover {
+	/*
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.51, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 1) 51%, hsla(0, 0%, 100%, 1) 100%);
+	*/
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.5)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+}
+.default .waf-menuItem.waf-state-active {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.68, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.3)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+}
+
+/**
+ * -----------------------------------
+ * @subsubsection sub-menuItem state
+ * -----------------------------------
+ */
+.default .waf-menuItem .waf-menuItem.waf-state-hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0.48)), color-stop(0.17, hsla(0, 0%, 100%, 1)), color-stop(0.83, hsla(0, 0%, 100%, 0)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+}
+.default .waf-menuItem .waf-menuItem.waf-state-active {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.68, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.3)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+}

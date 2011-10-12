@@ -1,0 +1,140 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget menuItem
+ *
+ * Includes grid-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem
+ * -------------------------------------------------------
+ */
+.light .waf-menuItem {
+	border-style: solid;
+	font-weight: bold;
+}
+.light .waf-menuItem .waf-menuItem  {
+	font-weight: normal;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem of horizontal menuBar
+ * -----------------------------------
+ */
+/*.light.waf-menuBar-horizontal .waf-menuItem + .waf-menuItem {
+	border-width: 0 0 0 1px;
+}*/
+.light.waf-menuBar-horizontal .waf-menuItem {
+background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.2)), color-stop(0.5, hsla(0, 0%, 100%, 0.17)), color-stop(0.5, hsla(0, 0%, 100%, 0.07)), to(hsla(0, 0%, 100%, 0.03)));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#07ffffff');
+	
+	border-width: 0;
+}
+
+.light.waf-menuBar-horizontal .waf-menuItem:not(:first-child) {
+	border-width: 0 0 0 1px;
+}
+
+.light.waf-menuBar-horizontal .waf-menuItem:first-child {
+	-webkit-border-radius: 10px 0 0 10px;
+	   -moz-border-radius: 10px 0 0 10px;
+	    -ms-border-radius: 10px 0 0 10px;
+	     -o-border-radius: 10px 0 0 10px;
+	        border-radius: 10px 0 0 10px;
+}
+.light.waf-menuBar-horizontal .waf-menuItem:last-child {
+	-webkit-border-radius: 0 10px 10px 0;
+	   -moz-border-radius: 0 10px 10px 0;
+	    -ms-border-radius: 0 10px 10px 0;
+	     -o-border-radius: 0 10px 10px 0;
+	        border-radius: 0 10px 10px 0;
+}
+
+.light.waf-menuBar-horizontal ul.waf-menuBar .waf-menuItem {
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	    -ms-border-radius: 0;
+	     -o-border-radius: 0;
+	        border-radius: 0;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection menuItem of vertical menuBar
+ * -----------------------------------
+ */
+/*.light.waf-menuBar-vertical .waf-menuItem + .waf-menuItem {
+	border-width: 1px 0 0 0;
+}*/
+.light.waf-menuBar-vertical .waf-menuItem {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.2)), color-stop(0.5, hsla(0, 0%, 100%, 0.17)), color-stop(0.5, hsla(0, 0%, 100%, 0.07)), to(hsla(0, 0%, 100%, 0.03)));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.17) 50%, hsla(0, 0%, 100%, 0.07) 50%, hsla(0, 0%, 100%, 0.03));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#07ffffff');
+	
+	border-width: 0;
+}
+
+.light.waf-menuBar-vertical .waf-menuItem:not(:first-child) {
+	border-width: 1px 0 0 0;
+}
+
+.light.waf-menuBar-vertical .waf-menuItem:first-child {
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+	    -ms-border-radius: 10px 10px 0 0;
+	     -o-border-radius: 10px 10px 0 0;
+	        border-radius: 10px 10px 0 0;
+}
+.light.waf-menuBar-vertical .waf-menuItem:last-child {
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+	    -ms-border-radius: 0 0 10px 10px;
+	     -o-border-radius: 0 0 10px 10px;
+	        border-radius: 0 0 10px 10px;
+}
+
+.light.waf-menuBar-vertical ul.waf-menuBar .waf-menuItem {
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	    -ms-border-radius: 0;
+	     -o-border-radius: 0;
+	        border-radius: 0;
+}

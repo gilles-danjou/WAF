@@ -1,0 +1,80 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget checkbox
+ *
+ * Includes checkbox-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/checkbox/css/widget-checkbox.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section checkbox container
+ * -------------------------------------------------------
+ */
+.light.waf-checkbox .waf-checkbox-box {
+ 	position: absolute;
+ 	width: 80%;
+	height: 80%;
+ 	left: 10%;
+ 	top: 10%;
+ 	
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	    -ms-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section checkbox icon
+ * -------------------------------------------------------
+ */
+ .light.waf-checkbox .waf-checkbox-icon {
+	position: absolute;
+ 	width: 70%;
+	height: 70%;
+ 	left: 15%;
+ 	top: 15%;
+}
+ .light.waf-checkbox .waf-checkbox-icon.waf-icon-svg {
+ 	display: none;
+ }
+
+/**
+ * -----------------------------------
+ * @subsection checkbox icon state
+ * -----------------------------------
+ */
+.light.waf-checkbox.waf-state-active .waf-checkbox-icon.waf-icon-svg,
+.light.waf-checkbox.waf-state-selected .waf-checkbox-icon.waf-icon-svg {
+ 	display: block;
+}

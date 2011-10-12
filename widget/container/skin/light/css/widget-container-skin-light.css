@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget container styles
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/container/css/widget-container.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section container container
+ * -------------------------------------------------------
+ */
+.light.waf-container {
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.58)), color-stop(0.1, rgba(255, 255, 255, 0.42)), color-stop(0.1, rgba(255, 255, 255, 0.25)), color-stop(0.9, rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.42) 10%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0.25) 90%, rgba(255, 255, 255, 0));
+	background-image:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.42) 10%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0.25) 90%, rgba(255, 255, 255, 0));
+	background-image:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.42) 10%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0.25) 90%, rgba(255, 255, 255, 0));
+	background-image:      -o-linear-gradient(top, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.42) 10%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0.25) 90%, rgba(255, 255, 255, 0));
+	background-image:         linear-gradient(top, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.42) 10%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0.25) 90%, rgba(255, 255, 255, 0));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#93ffffff', endColorstr='#00ffffff');*/
+	
+	
+	border-width: 1px;
+	border-style: solid;
+	
+	
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;
+            background-clip: padding-box;
+	
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+}

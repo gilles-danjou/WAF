@@ -1,0 +1,149 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget progressBar
+ *
+ * Includes progressBar-specific rules of the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/progressBar/css/widget-progressBar.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ * @colordef #......;
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.metal.waf-progressBar {
+	padding: 2px 0 0;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, hsla(0, 0%, 100%, 0.2)),
+		color-stop(1, hsla(0, 0%, 100%, 0.3))
+	);
+	background-image: -webkit-linear-gradient(
+		hsla(0, 0%, 100%, 0.2) 0%,
+		hsla(0, 0%, 100%, 0.3) 100%
+	);
+	background-image: -moz-linear-gradient(
+		hsla(0, 0%, 100%, 0.2) 0%,
+		hsla(0, 0%, 100%, 0.3) 100%
+	);
+	background-image: -ms-linear-gradient(
+		hsla(0, 0%, 100%, 0.2) 0%,
+		hsla(0, 0%, 100%, 0.3) 100%
+	);
+	background-image: -o-linear-gradient(
+		hsla(0, 0%, 100%, 0.2) 0%,
+		hsla(0, 0%, 100%, 0.3) 100%
+	);
+	background-image: linear-gradient(
+		hsla(0, 0%, 100%, 0.2) 0%,
+		hsla(0, 0%, 100%, 0.3) 100%
+	);
+	
+	-webkit-box-shadow:	inset 0px 1px 2px 0px hsla(0, 0%, 0%, 0.55),
+						0px 1px 0px 0px hsla(0, 0%, 100%, 0.55);
+	   -moz-box-shadow:	inset 0px 1px 2px 0px hsla(0, 0%, 0%, 0.55),
+						0px 1px 0px 0px hsla(0, 0%, 100%, 0.55);
+			box-shadow: inset 0px 1px 2px 0px hsla(0, 0%, 0%, 0.55),
+						0px 1px 0px 0px hsla(0, 0%, 100%, 0.55);
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section range
+ * -------------------------------------------------------
+ */
+@-webkit-keyframes waf-progressBar-animation {
+	from {
+		background-position: 0 0;
+	}
+	
+	to {
+		background-position: 100% 0;
+	}
+}
+
+
+.metal .waf-progressBar-range {
+	margin-top: -1px;
+	
+	-webkit-background-size: 15px 15px;
+	   -moz-background-size: 15px 15px;
+	    -ms-background-size: 15px 15px;
+		 -o-background-size: 15px 15px;
+			background-size: 15px 15px;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		color-stop(0.00, hsla(0, 0%, 100%, 0.17)),
+		color-stop(0.25, hsla(0, 0%, 100%, 0.17)),
+		color-stop(0.26, hsla(0, 0%, 100%, 0)),
+		color-stop(0.50, hsla(0, 0%, 100%, 0)),
+		color-stop(0.51, hsla(0, 0%, 100%, 0.17)),
+		color-stop(0.75, hsla(0, 0%, 100%, 0.17)),
+		color-stop(0.76, hsla(0, 0%, 100%, 0)),
+		color-stop(1.00, hsla(0, 0%, 100%, 0))
+	);
+	
+	background-image: -moz-linear-gradient(
+		top left 0deg,
+		hsla(0, 0%, 100%, 0.17),
+		hsla(0, 0%, 100%, 0.17) 50%,
+		hsla(0, 0%, 100%, 0) 50%,
+		hsla(0, 0%, 100%, 0) 100%
+	);
+	
+	-webkit-box-shadow:
+		inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.35),
+		inset 0px -1px 1px hsla(0, 0%, 100%, 0.5);
+	-moz-box-shadow:
+		inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.35),
+		inset 0px -1px 1px hsla	(0, 0%, 100%, 0.5);
+	-ms-box-shadow:
+		inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.35),
+		inset 0px -1px 1px hsla	(0, 0%, 100%, 0.5);
+	-o-box-shadow:
+		inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.35),
+		inset 0px -1px 1px hsla	(0, 0%, 100%, 0.5);
+	box-shadow:
+		inset 0px 1px 0px 0px hsla(0, 0%, 100%, 0.35),
+		inset 0px -1px 1px hsla(0, 0%, 100%, 0.5);
+}
+
+
+.metal .waf-progressBar-range span {
+	display: inline-block;
+	margin: auto 5px;
+	height: 100%;
+}

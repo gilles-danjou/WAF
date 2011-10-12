@@ -1,0 +1,84 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget dataGrid
+ *
+ * Includes grid-specific rules of the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid container
+ * -------------------------------------------------------
+ */
+.metal.waf-dataGrid {
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+	   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+			box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid header
+ * -------------------------------------------------------
+ */
+.metal .waf-dataGrid-header {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid body
+ * -------------------------------------------------------
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid cell
+ * -------------------------------------------------------
+ */
+.metal .waf-dataGrid-cell {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid footer
+ * -------------------------------------------------------
+ */
+.metal .waf-dataGrid-footer {
+	border-top-width: 1px;
+	border-top-style: solid;
+}

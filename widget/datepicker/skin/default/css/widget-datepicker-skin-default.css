@@ -1,0 +1,98 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * datepicker jQuery-ui widget
+ *
+ * Includes datepicker-specific rules of the Metal skin
+ *
+ * @style Default
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/skin/default/css/widget-skin-default.css
+ *
+ */
+
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section datepicker container
+ * -------------------------------------------------------
+ */
+.default.ui-datepicker {
+	padding: 0;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	    -ms-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+.default .ui-datepicker-header {
+	-webkit-border-radius: 3px 3px 0 0;
+	   -moz-border-radius: 3px 3px 0 0;
+	    -ms-border-radius: 3px 3px 0 0;
+	     -o-border-radius: 3px 3px 0 0;
+	        border-radius: 3px 3px 0 0;
+	
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.15)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.15) 53%, hsla(0, 0%, 100%, 0) 100%);
+	
+	border: 0;
+}
+
+
+.default .ui-datepicker-calendar {
+	border: 5px solid transparent;
+	margin: 0;
+}
+
+.default .ui-datepicker-calendar thead th {
+	text-transform: uppercase;
+}
+
+
+.default .ui-datepicker-calendar td {
+	padding: 0;
+}
+.default.ui-datepicker td a {
+	background-image: none;
+}
+
+.default.ui-datepicker td a.ui-state-hover {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.5)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+}
+.default.ui-datepicker td a.ui-state-active {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.68, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.3)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+}

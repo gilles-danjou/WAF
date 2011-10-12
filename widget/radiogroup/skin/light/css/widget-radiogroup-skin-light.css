@@ -1,0 +1,112 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget radiogroup
+ *
+ * Includes radiogroup-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/radiogroup/css/widget-radiogroup.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section radio box
+ * -------------------------------------------------------
+ */
+.waf-radioGroup .light.waf-radio .waf-radio-box {
+ 	position: relative;
+ 	width: 12px;
+	height: 12px;
+ 	left: 2px;
+ 	top: 2px;
+	
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	    -ms-border-radius: 6px;
+	     -o-border-radius: 6px;
+	        border-radius: 6px;
+	
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 1)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);
+	
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection radio box state
+ * -----------------------------------
+ */
+.waf-radioGroup .light.waf-radio.waf-state-active .waf-radio-box {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.68, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.3)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+}
+.waf-radioGroup .light.waf-radio.waf-state-selected .waf-radio-box {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.5, hsla(0, 0%, 100%, 0.23)), color-stop(1, hsla(0, 0%, 100%, 0.23)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0.77) 0%, hsla(0, 0%, 100%, 0.77) 53%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.23) 50%, hsla(0, 0%, 100%, 0.23) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.23) 50%, hsla(0, 0%, 100%, 0.23) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.23) 50%, hsla(0, 0%, 100%, 0.23) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.23) 50%, hsla(0, 0%, 100%, 0.23) 100%);
+}
+
+/**
+ * -------------------------------------------------------
+ * @section radio icon
+ * -------------------------------------------------------
+ */
+ .waf-radioGroup .light.waf-radio .waf-radio-icon {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+ 	left: 0;
+ 	top: 0;
+}
+
+.waf-radioGroup .light.waf-radio .waf-radio-icon.waf-icon-svg {
+	display: none;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection radio icon state
+ * -----------------------------------
+ */
+.waf-radioGroup .light.waf-radio.waf-state-active .waf-radio-icon.waf-icon-svg,
+.waf-radioGroup .light.waf-radio.waf-state-selected .waf-radio-icon.waf-icon-svg {
+ 	display: block;
+}
