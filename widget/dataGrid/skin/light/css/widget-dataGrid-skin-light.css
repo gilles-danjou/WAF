@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget dataGrid
+ *
+ * Includes grid-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid container
+ * -------------------------------------------------------
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid header
+ * -------------------------------------------------------
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid body
+ * -------------------------------------------------------
+ */
+.light .waf-dataGrid-body {
+	border-width: 0 1px 0 1px;
+	border-style: solid;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid row
+ * -------------------------------------------------------
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid cell
+ * -------------------------------------------------------
+ */
+.light .waf-dataGrid-cell {
+	border-left-width: 1px;
+	border-left-style: solid;
+}

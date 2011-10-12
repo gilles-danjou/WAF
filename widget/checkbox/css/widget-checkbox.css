@@ -1,0 +1,113 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget checkbox
+ *
+ * Includes mandatory rules for the checkbox widget
+ *
+ * @link /walib/WAF/widget/css/widget.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+ .waf-checkbox input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: 0 none;
+	
+	/* this is needed by IE */
+	display: block;
+	opacity: 0.01;
+	
+	-webkit-appearance: none;
+	   -moz-appearance: checkbox-container;
+	    -ms-appearance: none;
+	        appearance: none;
+}
+
+.waf-checkbox-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * -------------------------------------------------------
+ * @Icon image default state
+ * -------------------------------------------------------
+ */
+.waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-default {
+ 	display: block;
+}
+.waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-active,
+.waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-hover,
+.waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-selected {
+ 	display: none;
+}
+
+/**
+ * -------------------------------------------------------
+ * @Icon image hover state
+ * -------------------------------------------------------
+ */
+.waf-state-hover .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-hover {
+ 	display: block;
+}
+.waf-state-hover .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-active,
+.waf-state-hover .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-default,
+.waf-state-hover .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-selected {
+ 	display: none;
+}
+
+/**
+ * -------------------------------------------------------
+ * @Icon image active state
+ * -------------------------------------------------------
+ */
+.waf-state-active .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-active {
+ 	display: block;
+}
+.waf-state-active .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-hover,
+.waf-state-active .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-default,
+.waf-state-active .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-selected {
+ 	display: none;
+}
+ 
+ 
+/**
+ * -------------------------------------------------------
+ * @Icon image selected state
+ * -------------------------------------------------------
+ */
+.waf-state-selected .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-selected {
+ 	display: block;
+}
+.waf-state-selected .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-hover,
+.waf-state-selected .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-default,
+.waf-state-selected .waf-checkbox-icon.waf-icon-image .waf-checkbox-icon-active {
+ 	display: none;
+}

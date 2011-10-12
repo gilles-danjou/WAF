@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget slider
+ *
+ * Includes mandatory rules for the slider widget
+ *
+ * @link /walib/WAF/widget/css/widget.css
+ *
+ */
+/*
+.waf-slider.ui-slider-horizontal .ui-slider-handle {
+	bottom: -4px;
+	height: auto;
+	margin-left: auto;
+}
+.waf-slider.ui-slider-vertical .ui-slider-handle {
+	right: -4px;
+	width: auto;
+	margin-bottom: auto;
+}
+*/
+
+.waf-slider.ui-slider-horizontal .ui-slider-handle {
+	top: 0;
+	bottom: 0;
+	height: auto;
+}
+.waf-slider.ui-slider-vertical .ui-slider-handle {
+	left: 0;
+	right: 0;
+	width: auto;
+}
+
+.ui-slider-handle.ui-state-default.ui-corner-all {
+    height:30px;
+    width:30px;
+    background-size: 100%;
+    margin-top:-8px;
+}

@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget component
+ *
+ * Includes mandatory rules for the component widget
+ *
+ * @link /walib/WAF/widget/css/widget.css
+ *
+*/
+
+.waf-component {
+    overflow:  hidden;
+}
+
+/**
+ * -------------------------------------------------------
+ * @section waf-component-panel
+ * -------------------------------------------------------
+*/
+.ui-widget-content.waf-component-panel
+{
+    background: White;
+    border: 0px;
+}
+
+.ui-dialog.waf-component-panel
+{
+    padding: 0px;
+}
+
+.waf-component-panel .ui-dialog-titlebar
+{
+    padding: 2px 10px 2px 10px;
+    font-size:11px;
+    -moz-border-radius:4px 4px 0px 0px;
+    -webkit-border-radius: 4px 4px 0px 0px;
+    border-radius:4px 4px 0px 0px;
+}
+
+.waf-component-panel .ui-dialog-content
+{
+    padding: 0px;
+}
+
+textarea.ui-dialog-content
+{
+    width:100px;
+    -moz-border-radius:0px 0px 4px 4px;
+    -webkit-border-radius:0px 0px 4px 4px;
+    border-radius:0px 0px 4px 4px;
+
+}

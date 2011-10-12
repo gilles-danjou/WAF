@@ -1,0 +1,146 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget slider
+ *
+ * Includes slider-specific rules of the Light skin
+ *
+ * @style light
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/slider/css/widget-slider.css
+ * @link /walib/WAF/widget/skin/light/css/widget-skin-light.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.light.waf-slider {
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 1000px;
+	   -moz-border-radius: 1000px;
+	    -ms-border-radius: 1000px;
+	     -o-border-radius: 1000px;
+	        border-radius: 1000px;
+}
+
+/**
+ * -----------------------------------
+ * @subsection slider horizontal
+ * -----------------------------------
+ */
+.light.waf-slider.ui-slider-horizontal {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), color-stop(0.4, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.07)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.07));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.07));
+	background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.07));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.07));
+	background-image:         linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.07));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A000000', endColorstr='#11000000');
+}
+
+/**
+ * -----------------------------------
+ * @subsection slider vertical
+ * -----------------------------------
+ */
+.light.waf-slider.ui-slider-vertical {
+	background-image: -webkit-gradient(linear, left center, right center, from(rgba(0, 0, 0, 0.04)), color-stop(0.4, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.07)));
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.07));
+	background-image:    -moz-linear-gradient(left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.07));
+	background-image:     -ms-linear-gradient(left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.07));
+	background-image:      -o-linear-gradient(left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.07));
+	background-image:         linear-gradient(left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.07));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A000000', endColorstr='#11000000', GradientType=1);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section ui-slider-range
+ * -------------------------------------------------------
+ */
+.light.waf-slider .ui-slider-range {
+	-webkit-border-radius: 1000px;
+	   -moz-border-radius: 1000px;
+	    -ms-border-radius: 1000px;
+	     -o-border-radius: 1000px;
+	        border-radius: 1000px;
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-range horizontal
+ * -----------------------------------
+ */
+.light.waf-slider.ui-slider-horizontal .ui-slider-range {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255, 255, 255, 0.2)),color-stop(0.5, rgba(255, 255, 255, 0.17)),color-stop(0.5, rgba(255, 255, 255, 0.07)),to(rgba(255, 255, 255, 0.03))linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03)););
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:      -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:         linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#07ffffff');
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-range vertical
+ * -----------------------------------
+ */
+.light.waf-slider.ui-slider-vertical .ui-slider-range {
+	background-image: -webkit-gradient(
+		linear,
+		left center,
+		right center,
+		from(rgba(255, 255, 255, 0.2)),
+		color-stop(0.5, rgba(255, 255, 255, 0.17)),
+		color-stop(0.5, rgba(255, 255, 255, 0.07)),
+		to(rgba(255, 255, 255, 0.03))
+	);
+	background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:    -moz-linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:     -ms-linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:      -o-linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	background-image:         linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.03));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#07ffffff', GradientType=1);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section ui-slider-handle
+ * -------------------------------------------------------
+ */
+.light.waf-slider .ui-slider-handle {
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 1000px;
+	   -moz-border-radius: 1000px;
+	    -ms-border-radius: 1000px;
+	     -o-border-radius: 1000px;
+	        border-radius: 1000px;
+}

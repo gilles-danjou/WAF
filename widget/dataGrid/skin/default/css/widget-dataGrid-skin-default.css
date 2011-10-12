@@ -1,0 +1,133 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget dataGrid
+ *
+ * Includes grid-specific rules of the Default skin
+ *
+ * @style default
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/default/css/widget-skin-default.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid container
+ * -------------------------------------------------------
+ */
+.default.waf-dataGrid {
+	border-width: 1px;
+	border-style: solid;
+	
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	    -ms-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+	
+	overflow: hidden;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid header
+ * -------------------------------------------------------
+ */
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid body
+ * -------------------------------------------------------
+ */
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid row
+ * -------------------------------------------------------
+ */
+.default .waf-dataGrid-row {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	
+	border-top-style: solid;
+	border-bottom-style: solid;
+}
+
+/* states */
+.default .waf-dataGrid-row.waf-state-hover {
+	/*
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0.48)), color-stop(0.17, hsla(0, 0%, 100%, 1)), color-stop(0.83, hsla(0, 0%, 100%, 0)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.48) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	*/
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(0.47, hsla(0, 0%, 100%, 0)), color-stop(0.53, hsla(0, 0%, 100%, 0.5)), color-stop(1, hsla(0, 0%, 100%, 1)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 47%, hsla(0, 0%, 100%, 0.5) 53%, hsla(0, 0%, 100%, 1) 100%);
+}
+.default .waf-dataGrid-row.waf-state-active {
+	/*
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0.5)), color-stop(0.17, hsla(0, 0%, 100%, 1)), color-stop(0.83, hsla(0, 0%, 100%, 0)), color-stop(1, hsla(0, 0%, 100%, 0)));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 17%, hsla(0, 0%, 100%, 0) 83%, hsla(0, 0%, 100%, 0) 100%);
+	*/
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(0, 0%, 0%, 0)), color-stop(0.68, hsla(0, 0%, 0%, 0)), color-stop(1, hsla(0, 0%, 0%, 0.3)));
+	background-image: -webkit-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:    -moz-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:     -ms-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:      -o-linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+	background-image:         linear-gradient(bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 68%, hsla(0, 0%, 0%, 0.3) 100%);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid cell
+ * -------------------------------------------------------
+ */
+.default .waf-dataGrid-cell {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid footer
+ * -------------------------------------------------------
+ */
+.default .waf-dataGrid-footer {
+	border-top-width: 1px;
+	border-top-style: solid;
+}

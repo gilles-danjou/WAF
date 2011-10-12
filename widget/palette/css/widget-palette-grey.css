@@ -1,0 +1,489 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget color palette
+ *
+ * @style Grey
+ *
+ * @colordef rgb(204, 204, 204);
+ * @colordef rgb(238, 238, 238);
+ * @colordef rgb(128, 128, 128);
+ * @colordef rgb(85, 85, 85);
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.waf-widget {
+	color: hsla(0, 0%, 0%, 0.7);/*rgba(0, 0, 0, 0.7);*/
+}
+
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget subElements
+ * -------------------------------------------------------
+ */
+/**
+ * -----------------------------------
+ * @subsection Widget header
+ * -----------------------------------
+ */
+.waf-widget-header {
+    text-shadow: hsl(0, 0%, 100%) 0 1px 1px;/*rgb(255, 255, 255);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection Widget alternate content
+ * -----------------------------------
+ */
+.waf-widget-even {
+	background-color: hsla(0, 0%, 0%, 0.07);/*rgba(0, 0, 0, 0.07);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section button
+ * -------------------------------------------------------
+ */
+.waf-button {
+	background-color: hsl(0, 0%, 80%);/*rgb(204, 204, 204);*/
+    text-shadow: hsl(0, 0%, 100%) 0 1px 1px;/*rgb(255, 255, 255);*/
+}
+
+
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section checkbox
+ * -------------------------------------------------------
+ */
+ 
+/**
+ * -----------------------------------
+ * @subection checkbox state
+ * -----------------------------------
+ */
+.waf-checkbox.waf-state-hover,
+.waf-checkbox.waf-state-active,
+.waf-checkbox.waf-state-selected {
+	background-color: transparent;
+}
+
+/**
+ * -----------------------------------
+ * @subection checkbox box
+ * -----------------------------------
+ */
+.waf-checkbox .waf-checkbox-box {
+	background-color: hsl(0, 0%, 90%);/*rgb(230, 230, 230);*/
+	border-color: hsl(0, 0%, 45%);/*rgb(115, 115, 115);*/
+}
+
+/**
+ * -----------------------------------
+ * @subection checkbox icon symbol
+ * -----------------------------------
+ */
+.waf-checkbox .waf-checkbox-icon-symbol {
+	fill: hsl(0, 0%, 0%);/*rgb(0, 0, 0);*/
+}
+.waf-checkbox .waf-checkbox-icon-symbol-shadow {
+	fill: hsl(0, 0%, 100%);/*rgb(115, 115, 115);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section radio
+ * -------------------------------------------------------
+ */
+/**
+ * -----------------------------------
+ * @subection radio box state
+ * -----------------------------------
+ */
+.waf-radio.waf-state-hover,
+.waf-radio.waf-state-active,
+.waf-radio.waf-state-selected {
+	background-color: transparent;
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section combobox
+ * -------------------------------------------------------
+ */
+.waf-combobox {
+	background-color: hsl(0, 0%, 50%);/*rgb(128, 128, 128);*/
+	border-color: hsl(0, 0%, 44%);/*rgb(112, 112, 112);*/
+	color: hsl(0, 0%, 100%);/*rgb(255, 255, 255);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection combobox state
+ * -----------------------------------
+ */
+.waf-combobox.waf-state-hover {
+	background-color: hsl(0, 0%, 70%);
+}
+
+.waf-combobox.waf-state-active {
+	background-color: hsl(0, 0%, 60%);
+}
+
+/**
+ * -----------------------------------
+ * @subsection combobox input
+ * -----------------------------------
+ */
+.waf-combobox input {
+	text-shadow: hsl(0, 0%, 0%) 1px 1px;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsection combobox button
+ * -----------------------------------
+ */
+.waf-combobox button {
+	background: transparent;
+}
+
+/**
+ * -----------------------------------
+ * @subsection combobox ui-menu-item
+ * -----------------------------------
+ */
+.waf-combobox-list .ui-menu-item a {
+	border-color: transparent;
+}
+
+/**
+ * -------------------------------------------------------
+ * @section menuBar
+ * -------------------------------------------------------
+ */
+.waf-menuBar {
+	background-color: hsl(0, 0%, 80%);/*rgb(204, 204, 204);*/
+	border-color: hsla(0, 0%, 0%, 0.2);/*rgba(0, 0, 0, 0.2);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem
+ * -------------------------------------------------------
+ */
+.waf-menuItem {
+	border-color: hsl(0, 0%, 93%);/*rgb(255, 255, 255);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section container
+ * -------------------------------------------------------
+ */
+.waf-container {
+	background-color: hsl(0, 0%, 90%);
+	border-color: hsl(0, 0%, 44%);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section autoForm
+ * -------------------------------------------------------
+ */
+.waf-autoForm {
+	background-color: hsl(0, 0%, 100%);/*rgb(255, 255, 255);*/
+	
+	/**
+	 * @affected webkit win
+	 * @note WARNING !!!
+	 * Dont use rgba color for the container border:
+	 * this make webkit apply a global opacity on the widget
+	 *
+	 * ex: border-color: rgba(0, 0, 0, 0.3);
+	 */
+	border-color: hsl(0, 0%, 27%);/*rgb(70, 70, 70);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm header
+ * -----------------------------------
+ */
+.waf-autoForm-header th {
+	border-bottom-color: hsla(0, 0%, 0%, 0.3);/*rgba(0, 0, 0, 0.3);*/
+}
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm body
+ * -----------------------------------
+ */
+/* track */
+.waf-widget-body::-webkit-scrollbar-track {
+    background-color: hsla(0, 0%, 0%, 0.17);/*rgba(0, 0, 0, 0.17);*/
+}
+/* thumb */
+.waf-widget-body::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 0%, 0.3);/*rgba(0, 0, 0, 0.3);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm col
+ * -----------------------------------
+ */
+.waf-autoForm .attribute-col {
+	border-right-color: hsla(0, 0%, 0%, 0.17);/*rgba(0, 0, 0, 0.17);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection autoForm footer
+ * -----------------------------------
+ */
+.waf-autoForm-footer td {
+	border-top-color: hsla(0, 0%, 0%, 0.2);/*rgba(0, 0, 0, 0.2);*/
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section dataGrid
+ * -------------------------------------------------------
+ */
+.waf-dataGrid {
+	background-color: hsl(0, 0%, 100%);/*rgb(255, 255, 255);*/
+	
+	/**
+	 * @affected webkit win
+	 * @note WARNING !!!
+	 * Dont use rgba color for the container border:
+	 * this make webkit apply a global opacity on the widget
+	 *
+	 * ex: border: 1px solid rgba(0, 0, 0, 0.3);
+	 */
+	border-color: hsl(0, 0%, 44%);/*rgb(112, 112, 112);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection dataGrid header
+ * -----------------------------------
+ */
+.waf-dataGrid-header {
+	border-color: hsla(0, 0%, 0%, 0.3);/*rgba(0, 0, 0, 0.3);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection dataGrid body
+ * -----------------------------------
+ */
+/* track */
+.waf-dataGrid-body::-webkit-scrollbar-track {
+    background-color: hsla(0, 0%, 0%, 0.17);/*rgba(0, 0, 0, 0.17);*/
+}
+/* thumb */
+.waf-dataGrid-body::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 0%, 0.3);/*rgba(0, 0, 0, 0.3);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subsection dataGrid row
+ * -------------------------------------------------------
+ */
+.waf-dataGrid-row {
+	border-color: hsla(0, 0%, 0%, 0.1);
+}
+/* states */
+.waf-dataGrid-row.waf-state-hover {
+	background-color: hsla(0, 0%, 0%, 0.1);/*rgba(0, 0, 0, 0.1);*/
+}
+.waf-dataGrid-row.waf-state-active {
+	background-color: hsla(0, 0%, 0%, 0.2);/*rgba(0, 0, 0, 0.2);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subsection dataGrid cell
+ * -------------------------------------------------------
+ */
+.waf-dataGrid-cell {
+	border-left-color: hsla(0, 0%, 0%, 0.17);/*rgba(0, 0, 0, 0.17);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subsection dataGrid footer
+ * -------------------------------------------------------
+ */
+.waf-dataGrid-footer {
+	border-top-color: hsla(0, 0%, 0%, 0.17);/*rgba(0, 0, 0, 0.17);*/
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @section progressBar
+ * -------------------------------------------------------
+ */
+.waf-progressBar {
+	background-color: hsl(0, 0%, 50%);/*rgb(128, 128, 128);*/
+	border-color: hsl(0, 0%, 44%);/*rgb(112, 112, 112);*/
+	color: hsl(0, 0%, 100%);/*rgb(255, 255, 255);*/
+}
+
+.waf-progressBar-range {
+	background-color: hsl(0, 0%, 33%);/*rgb(85, 85, 85);*/
+	border-color: hsl(0, 0%, 44%);/*rgb(112, 112, 112);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section slider
+ * -------------------------------------------------------
+ */
+.waf-slider {
+	background-color: hsl(0, 0%, 90%);/*rgb(229, 229, 229);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection slider horizontal
+ * -----------------------------------
+ */
+.waf-slider.ui-slider-horizontal {
+	border-top-color: hsl(0, 0%, 63%);/*rgb(161, 161, 161);*/
+	border-right-color: hsl(0, 0%, 74%);/*rgb(161, 161, 161);*/
+	border-bottom-color: hsl(0, 0%, 90%);/*rgb(229, 229, 229);*/
+	border-left-color: hsl(0, 0%, 63%);/*rgb(189, 189, 189);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection slider vertical
+ * -----------------------------------
+ */
+.waf-slider.ui-slider-vertical {
+	border-top-color: hsl(0, 0%, 63%);/*rgb(161, 161, 161);*/
+	border-right-color: hsl(0, 0%, 90%);/*rgb(229, 229, 229);*/
+	border-bottom-color: hsl(0, 0%, 74%);/*rgb(189, 189, 189);*/
+	border-left-color: hsl(0, 0%, 63%);/*rgb(161, 161, 161);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-range
+ * -----------------------------------
+ */
+.waf-slider .ui-slider-range {
+	background-color: hsl(0, 0%, 33%);/*rgb(85, 85, 85);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection ui-slider-handle
+ * -----------------------------------
+ */
+.waf-slider .ui-slider-handle {
+	background-color: hsl(0, 0%, 0%);/*rgb(0, 0, 0);*/
+	border-color: hsl(0, 0%, 33%);/*rgb(0, 0, 0);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section textField
+ * -------------------------------------------------------
+ */
+.waf-textField {
+	background-color: hsl(0, 0%, 93%);/*rgb(238, 238, 238);*/
+	border-color: hsl(0, 0%, 80%);/*rgb(204, 204, 204);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section Widget state
+ * -------------------------------------------------------
+ */
+.waf-state-hover {
+	background-color: hsl(0, 0%, 77%);/*rgb(196, 196, 196);*/
+}
+
+.waf-state-active,
+.waf-state-selected {
+	background-color: hsl(0, 0%, 75%);/*rgb(192, 192, 192);*/
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section icon
+ * -------------------------------------------------------
+ */
+.waf-icon path {
+	fill: hsl(0, 0%, 37%);/*rgb(94, 94, 94);*/
+}
+.waf-widget-header .waf-icon path {
+	fill: hsl(0, 0%, 50%);/*rgb(128, 128, 128);*/
+}
+
+/**
+ * -----------------------------------
+ * @subsection icon state
+ * -----------------------------------
+ */
+/* hover */
+.waf-icon.waf-state-hover {
+	background-color: transparent;
+}
+.waf-icon.waf-state-hover path {
+	background-color: transparent;
+	opacity: 1;
+}

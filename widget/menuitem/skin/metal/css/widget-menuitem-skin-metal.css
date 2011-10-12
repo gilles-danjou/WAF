@@ -1,0 +1,89 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget menuItem
+ *
+ * Includes grid-specific rules of the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/grid/css/widget-grid.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem
+ * -------------------------------------------------------
+ */
+.metal .waf-menuItem {
+	border-style: solid;
+}
+
+.metal.waf-menuBar .waf-menuItem .waf-menuItem {
+	background-image: none;
+	filter: none;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem of horizontal menuBar
+ * -------------------------------------------------------
+ */
+.metal.waf-menuBar-horizontal .waf-menuItem {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.02)), to(rgba(0, 0, 0, 0.17)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:         linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05000000', endColorstr='#2b000000');
+	
+	border-width: 0;
+}
+
+.metal.waf-menuBar-horizontal .waf-menuItem:not(:first-child) {
+	border-width: 0 0 0 1px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuItem of vertical menuBar
+ * -------------------------------------------------------
+ */
+.metal.waf-menuBar-vertical .waf-menuItem {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.02)), to(rgba(0, 0, 0, 0.17)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	background-image:         linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.17));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05000000', endColorstr='#2b000000');
+	
+	border-width: 0;
+}
+
+.metal.waf-menuBar-vertical .waf-menuItem:not(:first-child) {
+	border-width: 1px 0 0 0;
+}

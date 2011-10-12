@@ -1,0 +1,152 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget dataGrid
+ *
+ * Includes default rules for the errorDiv widget
+ *
+ * @link /walib/WAF/widget/css/widget.css
+ *
+ */
+
+
+
+/**
+ * -------------------------------------------------------
+ * @subection errordiv conatainer
+ * -------------------------------------------------------
+ */
+.waf-error-div.ui-dialog-content {
+	padding: 0;
+}
+
+
+
+/**
+ * -------------------------------------------------------
+ * @subection errordiv message
+ * -------------------------------------------------------
+ */
+.waf-error-div-message-outside {
+	width: 100%;
+	margin-bottom: 10px;
+	
+	/*color: Black;
+	padding:5px;
+	border-style: solid;
+	border-width: 1;
+	border-color:Black;
+	*/
+	
+}
+
+.waf-error-div .waf-error-div-message-inside {
+	padding: 0 0 0 20px;
+	background: url("/walib/WAF/widget/errorDiv/svg/error.svg") no-repeat;
+	line-height: 16px;
+	font-weight: bold;
+	color: rgb(255, 0, 0);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv body
+ * -------------------------------------------------------
+ */
+.waf-error-div-body {
+	width: 100%;
+	padding: 8px 16px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv table
+ * -------------------------------------------------------
+ */
+.waf-error-div-table {
+	width: 100%;
+	
+	/*color:Black;
+	
+	border-style:solid;
+	border-width:1;
+	border-color:#808080;
+	*/
+}
+
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv table row
+ * -------------------------------------------------------
+ */
+.waf-error-div-row {
+
+}
+
+.waf-error-div-table-row td {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	vertical-align: top;
+}
+
+.waf-error-div-table-row td + td {
+	padding-left: 8px;
+}
+
+.waf-error-div-table-row + .waf-error-div-table-row td {
+	border-top: 1px dashed hsla(0, 0%, 0%, 0.2);
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv table message
+ * -------------------------------------------------------
+ */
+.waf-error-div-table-message {
+	position: relative;
+	text-align: left;
+}
+.waf-error-div-table-message::before {
+	position: absolute;
+	content: "- ";
+	left: -8px;
+}
+
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv table error number
+ * -------------------------------------------------------
+ */
+.waf-error-div-table-errnum {
+	text-align: right;
+}
+
+ 
+/**
+ * -------------------------------------------------------
+ * @subection errorDiv table component
+ * -------------------------------------------------------
+ */
+.waf-error-div-table-component {
+	text-align: right;
+}

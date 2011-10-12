@@ -1,0 +1,114 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * Widget textField
+ *
+ * Includes textField-specific rules of the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/textfield/css/widget-textfield.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section Main
+ * -------------------------------------------------------
+ */
+.metal.waf-textField {
+	border-width: 1px;
+	border-style: solid;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#fff),
+		color-stop(1%, rgba(255, 255, 255, 0.02)),
+		to(rgba(255, 255, 255, 0.7))
+	);
+	background-image: -webkit-linear-gradient(
+	 	top,
+	 	#fff,
+	 	rgba(255, 255, 255, 0.02) 1px,
+	 	rgba(255, 255, 255, 0.7) 100%
+	 );
+	background-image: -moz-linear-gradient(
+	 	top,
+	 	#fff,
+	 	rgba(255, 255, 255, 0.02) 1px,
+	 	rgba(255, 255, 255, 0.7) 100%
+	 );
+	background-image: -ms-linear-gradient(
+	 	top,
+	 	#fff,
+	 	rgba(255, 255, 255, 0.02) 1px,
+	 	rgba(255, 255, 255, 0.7) 100%
+	 );
+	background-image: -o-linear-gradient(
+	 	top,
+	 	#fff,
+	 	rgba(255, 255, 255, 0.02) 1px,
+	 	rgba(255, 255, 255, 0.7) 100%
+	 );
+	background-image: linear-gradient(
+	 	top,
+	 	#fff,
+	 	rgba(255, 255, 255, 0.02) 1px,
+	 	rgba(255, 255, 255, 0.7) 100%
+	 );
+	filter: progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#05ffffff',
+		endColorstr='#b2ffffff'
+	);
+	
+	resize: none;
+	outline: none;
+	
+	-webkit-transition: border 0.2s ease-in-out,
+		-webkit-box-shadow 0.2s ease-in-out;
+	-moz-transition: border 0.2s ease-in-out,
+		-moz-box-shadow 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out,
+		box-shadow 0.2s ease-in-out;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section textField state
+ * -------------------------------------------------------
+ */
+.metal.waf-textField.waf-state-hover,
+.metal.waf-textField.waf-state-focus {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.metal.waf-textField.waf-state-active {
+	-webkit-transition-duration: 0.0s;
+	   -moz-transition-duration: 0.0s;
+	     -o-transition-duration: 0.0s;
+}

@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/**
+ * Widget menuBar
+ *
+ * Includes menuBar-specific rules of the Metal skin
+ *
+ * @style metal
+ * @link /walib/WAF/widget/css/widget.css
+ * @link /walib/WAF/widget/menubar/css/widget-menubar.css
+ * @link /walib/WAF/widget/skin/metal/css/widget-skin-metal.css
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * @section menuBar container
+ * -------------------------------------------------------
+ */
+.metal.waf-menuBar {
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0.6)), color-stop(0.4, hsla(0, 0%, 100%, 0.3)), color-stop(0.4, hsla(0, 0%, 100%, 0.2)), color-stop(1.0, hsla(0, 0%, 100%, 0.0)));
+    background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 40%, hsla(0, 0%, 100%, 0.2) 40%, hsla(0, 0%, 100%, 0.0) 100%);
+    background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 40%, hsla(0, 0%, 100%, 0.2) 40%, hsla(0, 0%, 100%, 0.0) 100%);
+    background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 40%, hsla(0, 0%, 100%, 0.2) 40%, hsla(0, 0%, 100%, 0.0) 100%);
+    background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 40%, hsla(0, 0%, 100%, 0.2) 40%, hsla(0, 0%, 100%, 0.0) 100%);
+    background-image:         linear-gradient(top, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 40%, hsla(0, 0%, 100%, 0.2) 40%, hsla(0, 0%, 100%, 0.0) 100%);
+    */
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0px rgba(255, 255, 255, 0.5);
+	
+	border-width: 1px;
+	border-style: solid;
+}
+
+.metal.waf-menuBar .waf-menuBar {
+	background-image: none;
+}

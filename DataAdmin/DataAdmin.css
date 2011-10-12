@@ -1,0 +1,312 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+.EMList
+{
+	width:200px;
+	height:400px;
+	top:30px;
+	left:30px;
+	border-color:Black;
+	border-style:solid;
+	border-width:1px;
+	background-color:#e0e0e0;
+	/*-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;*/
+	-moz-box-shadow:6px 6px 7px #888;
+	-webkit-box-shadow:6px 6px 7px #888;
+	cursor:default;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+}
+
+.EMList-title
+{
+	border-color:#333333;
+	border-style:solid;
+	border-width:1px;
+	background-color:#c0c0c0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-top:6px;
+	margin-left:6px;
+	margin-right:6px;
+	text-align:center;
+	font-weight:bolder;
+}
+
+.EMList-title:hover
+{
+	-moz-box-shadow:3px 3px 5px #888;
+	-webkit-box-shadow:3px 3px 5px #888;
+	background-color:#b0b0b0;
+}
+
+.EMlist-outside
+{
+	margin-top:15px;
+	margin-left:6px;
+	margin-right:6px;
+	margin-bottom:15px;
+	border-color:#808080;
+	border-style:solid;
+	border-width:1px;
+}
+
+.EMList-inside
+{
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 1)), to(rgba(192, 192, 192, 1)));
+	background-image:-moz-linear-gradient(center top , rgba(255, 255, 255, 1), rgba(192, 192, 192, 1));
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.em-element
+{
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+	
+}
+
+.em-elem-text
+{
+}
+
+.em-elem-pastille
+{
+	background-color:White;
+	float:left;
+	height:8px;
+	margin-right:6px;
+	margin-top:8px;
+	vertical-align:middle;
+	width:8px;
+	border-style:none;
+}
+
+.em-elem-pastille:hover
+{
+	border-color:Black;
+	border-style:solid;
+	border-width:2px;
+	height:4px;
+	width:4px;
+}
+
+
+.em-elem-text:hover
+{
+	text-decoration:underline;
+}
+
+.em-elem-button
+{
+	height:16px;
+	width:16px;
+	background-image: url("/waLib/WAF/DataAdmin/Images/openEm.png");
+	float:right;
+}
+
+.em-elem-button:hover
+{
+	background-image: url("/waLib/WAF/DataAdmin/Images/openEm-over.png");
+}
+
+.em-listview-grid
+{
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+	/*
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:13px;
+	margin-bottom:13px;
+	*/
+}
+
+.em-listview-panel
+{
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.em-listview-panel-content
+{
+	
+}
+
+.em-listview-panel.ui-dialog
+{
+	padding: 0 0 0 0;
+}
+
+.em-listview-panel.ui-dialog .ui-dialog-content 
+{
+	padding: 0 0 0 0;
+	overflow:hidden;
+}
+
+.em-listview-panel.ui-widget
+{
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.em-listview-panel.ui-dialog .ui-dialog-titlebar
+{
+	color:White;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.5)));
+	background-image:-moz-linear-gradient(center top , rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+	border:none;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-radius-bottomright: 0;
+	-webkit-border-radius-bottomleft: 0;
+}
+
+.query-button
+{
+	height:24px;
+	width:24px;
+	background-image: url("/waLib/WAF/DataAdmin/Images/query.png");
+	float:right;
+}
+
+.query-container
+{
+	vertical-align:middle;
+	position:absolute;
+	/*
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:10px;
+	*/
+	padding-right:20px;
+	padding-left:15px;
+	padding-bottom:8px;
+	padding-top:8px;
+	height:auto;
+	width:auto;
+	border-color:Black;
+	border-style:solid;
+	border-width:1px;
+	background-color:#e0e0e0;
+	-moz-box-shadow:4px 4px 5px #888;
+	-webkit-box-shadow:4px 4px 5px #888;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 1)), to(rgba(192, 192, 192, 1)));
+	background-image:-moz-linear-gradient(center top , rgba(255, 255, 255, 1), rgba(192, 192, 192, 1));
+}
+
+
+.query-button:hover
+{
+	background-image: url("/waLib/WAF/DataAdmin/Images/query-over.png");
+}
+
+.query-input
+{
+	width:auto;
+	vertical-align:middle;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:2px;
+}
+
+
+
+.em-formview-panel
+{
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.em-formview-panel-content
+{
+	
+}
+
+.em-formview-panel.ui-dialog
+{
+	padding: 0 0 0 0;
+}
+
+.em-formview-panel.ui-dialog .ui-dialog-content 
+{
+	padding: 0 0 0 0;
+	overflow:hidden;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.2)));
+	background-image:-moz-linear-gradient(center top , rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
+}
+
+.em-formview-panel.ui-widget
+{
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.em-formview-panel.ui-dialog .ui-dialog-titlebar
+{
+	display:none;
+	height:0px;
+	width:0px;
+}
+
+.em-formview-panel .waf-autoform-header
+{
+	cursor:move;
+}
+
+.em-formview-panel .autoform-title-col
+{
+	cursor:move;
+}
+
+.em-formview-panel.ui-dialog .ui-icon
+{
+	background-image:none;
+}
+
+.waf-form-body.autonomous
+{
+	overflow:auto;
+}
+
+
+.waf-form-body-inside
+{
+	height:auto;
+}
+
+
+
+
+
+
+
+

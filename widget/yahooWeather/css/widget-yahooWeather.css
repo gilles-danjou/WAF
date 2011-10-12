@@ -1,0 +1,241 @@
+/*
+* Copyright (c) 4D, 2011
+*
+* This file is part of Wakanda Application Framework (WAF).
+* Wakanda is an open source platform for building business web applications
+* with nothing but JavaScript.
+*
+* Wakanda Application Framework is free software. You can redistribute it and/or
+* modify since you respect the terms of the GNU General Public License Version 3,
+* as published by the Free Software Foundation.
+*
+* Wakanda is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* Licenses for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+*/
+/** 
+ * YAHOO! Weather Widget styles
+ *
+ * @author			The Wakanda Team
+ * @version			0.1
+ *
+ */
+
+
+/**
+ * -------------------------------------------------------
+ * Setting default styles
+ *
+ * @section default
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather {
+	cursor: default;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	
+	-webkit-perspective: 700;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #fff;
+	text-shadow: #666666 2px 2px 2px;
+}
+
+.waf-yahooWeather * {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	color: inherit;
+    text-align: inherit;
+}
+
+/**
+ * -------------------------------------------------------
+ * @section font
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather option {
+	color: #666666;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * Frontside and Backside divs
+ * 
+ * @section front & back
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin: 4px 6px 10px 7px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	
+	overflow: visible !important;
+}
+.waf-yahooWeather > .front {
+	z-index: 900;
+}
+.waf-yahooWeather > .back {
+	z-index: 800;
+	-webkit-transform: rotateY(-180deg);
+}
+
+/* flip state */
+.waf-yahooWeather.flip > .front {
+	-webkit-transform: rotateY(180deg);
+}
+.waf-yahooWeather.flip > .back {
+	-webkit-transform: rotateY(0deg);
+	z-index: 1000;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * Weather icons
+ * 
+ * @section icon
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather .icon {
+	background-repeat: no-repeat;
+}
+
+.waf-yahooWeather .condition.icon {
+	position: absolute;
+	left: 0;
+	top: -45px;
+	width: 250px;
+	height: 180px;
+	background-position: left top;
+}
+
+.waf-yahooWeather table .icon {
+	margin: 0 auto;
+	float: left;
+	width: 61px;
+	height: 34px;
+	background-image: url("http://l.yimg.com/a/lib/ywc/img/wicons.png");
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section title
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather h2,
+.waf-yahooWeather h4 {
+	text-align: right;
+}
+.waf-yahooWeather h2 {
+	padding: 0 13px 0 0;
+	font-size: 40px;
+}
+.waf-yahooWeather h2 span {
+	margin-left: -10px;
+	font-size: 12px;
+}
+.waf-yahooWeather h4 {
+	padding: 1px 13px 0 0;
+	font-size: inherit;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * Two days forecast
+ * 
+ * @section forecast
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather table {
+	margin-top: 20px;
+	width: 100%;
+	font-size: inherit;
+}
+.waf-yahooWeather th {
+	background: url("/walib/WAF/widget/yahooWeather/png/background-alpha.png");
+	text-align: center;
+}
+.waf-yahooWeather th,
+.waf-yahooWeather td {
+	font-size: 11px;
+	padding: 3px;
+}
+
+.waf-yahooWeather .low {
+	color: #2d4c78;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * Form settings
+ * 
+ * @section settings
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather > .back form {
+	padding: 10px;
+}
+.waf-yahooWeather > .back fieldset {
+	padding: 4px;
+	border: 2px groove rgba(0, 0, 0, 0.1);
+}
+.waf-yahooWeather > .back legend {
+	padding: 4px;
+	font-size: 12px;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @section links
+ * -------------------------------------------------------
+ */
+.waf-yahooWeather a {
+	position: absolute;
+	bottom: 15px;
+	text-decoration: none;
+}
+.waf-yahooWeather a.full {
+	left: 15px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: #666666 2px 2px 2px;
+}
+.waf-yahooWeather a.settings {
+	width: 16px;
+	height: 16px;
+	right: 15px;
+	display: block;
+	background: url("/walib/WAF/widget/yahooWeather/png/cog.png") no-repeat;
+	text-indent: -1000px;
+	overflow: hidden;
+}
