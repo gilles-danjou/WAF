@@ -1,29 +1,20 @@
 /*
-* Copyright (c) 4D, 2011
-*
-* This file is part of Wakanda Application Framework (WAF).
-* Wakanda is an open source platform for building business web applications
-* with nothing but JavaScript.
-*
-* Wakanda Application Framework is free software. You can redistribute it and/or
-* modify since you respect the terms of the GNU General Public License Version 3,
-* as published by the Free Software Foundation.
-*
-* Wakanda is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* Licenses for more details.
-*
-* You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+Wakanda Software (the "Software") and the corresponding source code remain
+the exclusive property of 4D and/or its licensors and are protected by national
+and/or international legislations.
+This file is part of the source code of the Software provided under the relevant
+Wakanda License Agreement available on http://www.wakanda.org/license whose compliance
+constitutes a prerequisite to any use of this file and more generally of the
+Software and the corresponding source code.
 */
-WAF.addWidget({
-    
-    /**
-    *  Widget Descriptor
-    *
-    */ 
-    
+
+/**
+* Widget Descriptor
+*
+*/ 
+
+WAF.config.taglib.push({
+
     /* PROPERTIES */
 
     // {String} internal name of the widget
@@ -52,25 +43,40 @@ WAF.addWidget({
 
     // {Array} attributes of the widget. By default, we have 3 attributes: 'data-type', 'data-lib', and 'id', so it is unnecessary to add them
     // 
-    // @property {String} name, name of the attribute (mandatory)     
-    // @property {String} description, description of the attribute (optional)
-    // @property {String} defaultValue, default value of the attribute (optional)
-    // @property {'string'|'radio'|'checkbox'|'textarea'|'dropdown'|'integer'} type, type of the field to show in the GUI Designer (optional)
-    // @property {Array} options, list of values to choose for the field shown in the GUI Designer (optional)
+    // @attribute {String} name, name of the attribute (mandatory)     
+    // @attribute {String} description, description of the attribute (optional)
+    // @attribute {String} defaultValue, default value of the attribute (optional)
+    // @attribute {'string'|'radio'|'checkbox'|'textarea'|'dropdown'|'integer'} type, type of the field to show in the GUI Designer (optional)
+    // @attribute {Array} options, list of values to choose for the field shown in the GUI Designer (optional)
     attributes  : [                                                       
-    {
-        name        : '',                                                 
-        description : '',                                                 
-        defaultValue: '',                                                 
-        type        : '',                                                 
-        options     : []                                                  
-    }    
+        {
+            name        : '',                                                 
+            description : '',                                                 
+            defaultValue: '',                                                 
+            type        : '',                                                 
+            options     : []                                                  
+        },
+        {
+            name      	 : 'data-theme',
+            description	 : 'Theme',
+            type      		 : 'dropdown',
+            options   	 : function () {
+                var themes, selection;
+                themes = WAF.widget.themes;
+                selection = [];
+                selection[themes.inherited.key] = themes.inherited.value;
+                selection[themes.orange.key]    = themes.orange.value;
+                selection[themes.metal.key]     = themes.metal.value;
+                return selection;
+            }.call(),
+            defaultValue: ''
+        }
     ],
 
     // {Array} default height and width of the container for the widget in the GUI Designer
     // 
-    // @property {String} name, name of the attribute 
-    // @property {String} defaultValue, default value of the attribute  
+    // @attribute {String} name, name of the attribute 
+    // @attribute {String} defaultValue, default value of the attribute  
     style: [                                                                     
     {
         name        : 'width',
@@ -83,9 +89,9 @@ WAF.addWidget({
 
     // {Array} events ot the widget
     // 
-    // @property {String} name, internal name of the event (mandatory)     
-    // @property {String} description, display name of the event in the GUI Designer
-    // @property {String} category, category in which the event is displayed in the GUI Designer (optional)
+    // @attribute {String} name, internal name of the event (mandatory)     
+    // @attribute {String} description, display name of the event in the GUI Designer
+    // @attribute {String} category, category in which the event is displayed in the GUI Designer (optional)
     events: [                                                              
     {
         name       : 'click',
@@ -120,15 +126,11 @@ WAF.addWidget({
 
     // {JSON} panel properties widget
     //
-    // @property {Object} enable style settings in the Styles panel in the Properties area in the GUI Designer
+    // @attribute {Object} enable style settings in the Styles panel in the Properties area in the GUI Designer
     properties: {
         style: {                                                
-            theme       : false,                 // false to not display the "Theme" option in the "Theme & Class" section
-
-            //    theme : {
-            //    	roundy: false		//all the default themes are displayed by default. Pass an array with the
-            //   }				//themes to hide ('default', 'inherited', roundy, metal, light)
-        
+            theme       : true,                 // true to display the "Theme" option in the "Theme & Class" section
+            // For the "Theme" setting, you must also define the actual themes Attributes array
             fClass      : true,                 // true to display the "Class" option in the "Theme & Class" section
             text        : true,                 // true to display the "Text" section
             background  : true,                 // true to display widget "Background" section
@@ -136,7 +138,7 @@ WAF.addWidget({
             sizePosition: true,                 // true to display widget "Size and Position" section
             label       : true,                 // true to display widget "Label Text" and "Label Size and Position" sections
             // For these two sections, you must also define the "data-label" in the Attributes array
-            disabled     : ['border-radius']     // list of styles settings to disable for this widget
+            disable     : ['border-radius']     // list of styles settings to disable for this widget
         }
     },
 
@@ -144,16 +146,11 @@ WAF.addWidget({
     // 
     // {Array} list of sub elements for the widget
     // 
-    // @property {String} label of the sub element
-    // @property {String} css selector of the sub element
+    // @attribute {String} label of the sub element
+    // @attribute {String} css selector of the sub element
     structure: [{
         description : 'Description',
-        selector    : '.subElement',
-        style: {
-            background  : true, //define which elements in the Styles tab you want to display
-            gradient    : true,
-            border      : true
-        }
+        selector    : '.subElement'
     }],
 
     /* METHODS */
@@ -181,5 +178,4 @@ WAF.addWidget({
     onDesign: function (config, designer, tag, catalog, isResize) {
         var widget = new WAF.widget.Template(config);               
     }                                                               
-    
 });                                                                                                                                  

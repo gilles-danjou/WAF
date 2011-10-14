@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 /*jslint white: true, evil: true, es5: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, immed: true, strict: true */
 

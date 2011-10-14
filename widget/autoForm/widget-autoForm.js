@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 /*
 if (typeof (WAF) === "undefined")
@@ -874,6 +874,7 @@ WAF.AF.buildForm = function(divID, dataSource, attrList, nameList, options, cata
 		bodyDom = $('.waf-form-body', formdiv);
 		if (withToolBar)
 			footerDom = $('.waf-widget-footer', formdiv);
+                    
 		WAF.AF.afterResize(formdiv, withToolBar);
 		
 	}
@@ -1126,7 +1127,6 @@ WAF.AF.buildForm = function(divID, dataSource, attrList, nameList, options, cata
 	    );
 	    
 	    formdiv.find('.attribute-rel').append(attibuteRelatedIcon.containerNode);
-	    
 	    if (options.included !== false) {
 	        formdiv.find('tbody').css({
 	            display: 'block',
@@ -1506,9 +1506,8 @@ WAF.AF.afterResize = function(formdiv, withToolBar)
 		headerDom = $('.waf-widget-header', formdiv);
 		bodyDom = $('.waf-form-body', formdiv);
 		footerDom = $('.waf-widget-footer', formdiv);
-	}
-	
-	
+	}	
+        
 	if (formdiv != null)
 	{
 		var formHeight = formdiv.height();				
@@ -2819,6 +2818,7 @@ WAF.Widget.provide(
     },
     function WAFWidget(config, data, shared) {
         var
+        that,
         source,
         nameList,
         attrList,
@@ -2828,6 +2828,7 @@ WAF.Widget.provide(
         options,
         htmlObject;
         
+        that                = this;
         htmlObject          = $(this.containerNode);
         source              = WAF.source[config['data-binding']];
         nameList            = [];
@@ -2885,6 +2886,24 @@ WAF.Widget.provide(
             this.oldAF.afterResize  = WAF.AF.afterResize;   
             
             /*
+             * Specific resize for autoform to fix conflict with resizable included widgets
+             */
+            if (data.resizable == 'true') {
+
+               htmlObject.resizable({                
+                    start : function(e) {
+                        that.resize('start');
+                    },
+                    resize : function(e) {
+                        that.resize('on');
+                    },
+                    stop : function(e) {
+                        that.resize('stop');
+                    }
+                });
+            }
+            
+            /*
              * Allow to resize subelements
              */
             if (this.oldAF.installResizeOnSubWidgets != null) {
@@ -2895,6 +2914,7 @@ WAF.Widget.provide(
              * DEPRECATED AFTER REFACTORING
              */
             WAF.widgets[this.id] = this;
+            
         /*
          * Display a message to indicate that the widget is not binded
          */
@@ -2905,6 +2925,7 @@ WAF.Widget.provide(
         if (data.draggable == 'true') {
             htmlObject.children('.waf-widget-header,.waf-widget-footer').css('cursor', 'pointer');
         }
+        
     }, {       
         /*
          * Resize method called during resize
@@ -2923,14 +2944,12 @@ WAF.Widget.provide(
             htmlObject  = $(this.containerNode);
             width       = htmlObject.width();
             height      = htmlObject.height();
-            newHeight   = height - parseInt(htmlObject.children('.waf-widget-footer').css('height'));
-            newHeight  -= parseInt(htmlObject.children('.waf-widget-header:first').css('height'));
+            newHeight   = height - parseInt(htmlObject.find('.waf-widget-footer').css('height'));
+            newHeight  -= parseInt(htmlObject.find('.waf-widget-header:first').css('height'));
             
-            htmlObject.children('.waf-widget-body:first').css('width', width);
-            htmlObject.children('.waf-widget-body:not(:first)').css('width', '100%');
-            
-            htmlObject.children('.waf-widget-body:first').css('height',  newHeight + 'px');
-                    
+            htmlObject.find('.waf-widget-body:first').css('width', width);
+            htmlObject.find('.waf-widget-body:not(:first)').css('width', '100%');
+            htmlObject.find('.waf-widget-body:first').css('height',  newHeight + 'px');
             
             this.oldAF.afterResize();
         },

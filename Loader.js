@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 /**
  * 
@@ -53,7 +53,7 @@ if (typeof(WAF) === 'undefined') {
          * @property BUILD
          * @type String
          **/
-        'BUILD'  : '97744',
+        'BUILD'  : '0001',
 
         /**
          * The configuration of the framework

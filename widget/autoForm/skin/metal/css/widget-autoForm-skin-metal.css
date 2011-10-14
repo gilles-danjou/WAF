@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 /** 
  * Widget autoForm
@@ -49,6 +49,9 @@
  * @section autoForm header
  * -------------------------------------------------------
  */
+.metal .waf-autoForm-header {
+	height: 25px;
+}
 .metal .waf-autoForm-header th {
 	height: 25px;
 	border-bottom-width: 1px;
@@ -89,6 +92,7 @@ thumb
  * @section autoForm footer
  * -------------------------------------------------------
  */
+.metal .waf-autoForm-footer,
 .metal .waf-autoForm-footer td {
 	height: 25px;
 	border-top-width: 1px;

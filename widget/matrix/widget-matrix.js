@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 WAF.Widget.provide(
 
@@ -269,6 +269,13 @@ WAF.Widget.provide(
                     // Get the container children
                     children.each(function(e) {
                         subChild = $(this);
+                        
+                        /*
+                         * Remove draggable and resizable to prevent function duplication
+                         */
+                        subChild.resizable('destroy');
+                        subChild.draggable('destroy');
+                        
                         widget = WAF.widgets[subChild.attr('id')];
                         if (subChild.attr('data-binding') && widget.source) {
                             // Get the source of widget
@@ -417,7 +424,7 @@ WAF.Widget.provide(
                                     }, userData);
                                 break;  
 
-                            case 'onCurrentElementChange' :                                
+                            case 'onCurrentElementChange' :
                                 if (!e.data.that.elt) {
                                 } else {
                                     displayedRow    = e.data.that.getDisplayedRow();
@@ -453,7 +460,6 @@ WAF.Widget.provide(
                                 e.dataSource.select(firstPos, {
                                     dispatcherID : config.id
                                 });  
-                                
                                 
                                 /*
                                  * ADD SCROLL EVENTS
@@ -603,17 +609,32 @@ WAF.Widget.provide(
                                                         
                                                         $.each(currentContainer.children(), function() {
                                                             var
+                                                            thatHtml,
+                                                            refHtml,
                                                             currentWidget;
 
-                                                            currentWidget = WAF.widgets[this.id];
-
+                                                            currentWidget   = WAF.widgets[this.id];
+                                                            thatHtml        = $(this);
+                                                            refHtml         = $('#' + thatHtml.attr('data-ref'));
+                                                            
                                                             if (currentWidget && currentWidget.kind != 'container') {
                                                                 currentWidget.clear();
                                                             }
                                                             
                                                             if (currentWidget && currentWidget.setSplitPosition) {
-                                                                currentWidget.setSplitPosition(WAF.widgets[$(this).attr('data-ref')].getSplitPosition());
+                                                                currentWidget.setSplitPosition(WAF.widgets[thatHtml.attr('data-ref')].getSplitPosition());
                                                             }
+                                                        
+                                                            if (thatHtml.attr('data-resizable') && thatHtml.attr('data-resizable') == 'true') {
+                                                                thatHtml.width(refHtml.width());
+                                                                thatHtml.height(refHtml.height());
+                                                            }
+                                                                    
+                                                            if (thatHtml.attr('data-draggable') && thatHtml.attr('data-draggable') == 'true') {
+                                                                thatHtml.css('top', refHtml.css('top'));
+                                                                thatHtml.css('left', refHtml.css('left'));
+                                                            }
+
                                                         });
 
                                                         if (sourceRef.getPosition() == pos &&  that.currentPos == pos) {
@@ -676,16 +697,30 @@ WAF.Widget.provide(
                                                         
                                                                 $.each(currentContainer.children(), function() {
                                                                     var
+                                                                    thatHtml,
+                                                                    refHtml,
                                                                     currentWidget;
 
-                                                                    currentWidget = WAF.widgets[this.id];
+                                                                    currentWidget   = WAF.widgets[this.id];
+                                                                    thatHtml        = $(this);
+                                                                    refHtml         = $('#' + thatHtml.attr('data-ref'));
                                                                     
                                                                     if (currentWidget && currentWidget.kind != 'container') {
                                                                         currentWidget.clear();
                                                                     }
                                                                     
                                                                     if (currentWidget && currentWidget.setSplitPosition) {
-                                                                        currentWidget.setSplitPosition(WAF.widgets[$(this).attr('data-ref')].getSplitPosition());
+                                                                        currentWidget.setSplitPosition(WAF.widgets[thatHtml.attr('data-ref')].getSplitPosition());
+                                                                    }
+                                                                    
+                                                                    if (thatHtml.attr('data-resizable') && thatHtml.attr('data-resizable') == 'true') {
+                                                                        thatHtml.width(refHtml.width());
+                                                                        thatHtml.height(refHtml.height());
+                                                                    }
+                                                                    
+                                                                    if (thatHtml.attr('data-draggable') && thatHtml.attr('data-draggable') == 'true') {
+                                                                        thatHtml.css('top', refHtml.css('top'));
+                                                                        thatHtml.css('left', refHtml.css('left'));
                                                                     }
                                                                 });
 
@@ -1141,7 +1176,7 @@ WAF.Widget.provide(
                         if (dsPos < sourceRef.length) {
                             /// Clone html element
                             eltHtml.clone(true, true).attr('id', cloneConfig.id).appendTo(container);
-
+                            
                             containerClone = $('#' + cloneConfig.id);
                             containerClone.children('.waf-splitter').remove();
                         

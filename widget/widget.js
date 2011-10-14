@@ -15,7 +15,7 @@
 * Licenses for more details.
 *
 * You should have received a copy of the GNU General Public License version 3
-* along with Wakanda. If not see : <http://www.gnu.org/licenses/>
+* along with Wakanda. If not see : http://www.gnu.org/licenses/
 */
 //// "use strict";
 
@@ -575,7 +575,7 @@ WAF.Widget.provide = function provide(name, shared, construct, proto) {
         /*
          * Append resizable method if defined
          */
-        if (data && data.resizable == 'true') {
+        if (data && data.resizable == 'true' && this.kind != 'autoform') {
             this.resizable();
         }
         
